@@ -5,7 +5,7 @@ var gifArray = ["sloth", "panda","pug"];
 
 $(document).ready(function(){
   // javascript, jQuery
-  var xhr = $.get("http://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=dc6zaTOxFJmzC&limit=5");
+  var xhr = $.get("https://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=dc6zaTOxFJmzC&limit=5");
   xhr.done(function(data) { console.log("success got data", data); });
 
     $("#button_begin").click(function(){
@@ -71,7 +71,7 @@ $(document).ready(function(){
         var myAnimal = $(this).attr("data-name");
         // Storing our giphy API URL for a random cat image
         //  var queryURL = "http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=" + animal;
-        var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + myAnimal + "&api_key=dc6zaTOxFJmzC";
+        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + myAnimal + "&api_key=dc6zaTOxFJmzC";
 
         // Perfoming an AJAX GET request to our queryURL
         $.ajax({
