@@ -1,0 +1,39 @@
+﻿GIPHY
+
+In this assignment, you'll use the GIPHY API to make a dynamic web page that populates with gifs of your choice.
+1. Must call the GIPHY API
+2. Use JavaScript and jQuery to change the HTML of your site.
+
+http://api.giphy.com/v1/gifs/search?q=funny+cat&api_key=dc6zaTOxFJmzC
+
+#javascript, jQuery
+var xhr = $.get("http://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=dc6zaTOxFJmzC&limit=5");
+xhr.done(function(data) { console.log("success got data", data); });
+
+
+GIPHY parameters (hint, hint):
+1. q
+2. limit
+3. rating
+
+Like many APIs, GIPHY requires developers to use a key to access their API data.
+The public beta key is "dc6zaTOxFJmzC”
+
+1. you need to create an array of strings, each one related to a topic that interests you.
+	Save it to a variable called topics.
+	We chose animals for our theme, but you can make a list to your own liking.
+
+2. Your app should take the topics in this array and create buttons in your HTML.
+	Try using a loop that appends a button for each string in the array.
+	
+3. When the user clicks on a button, the page should grab 10 static, non-animated gif images from the GIPHY API and place them on the page.
+
+4. When the user clicks one of the still GIPHY images, the gif should animate. If the user clicks the gif again, it should stop playing.
+
+5. Under every gif, display its rating (PG, G, so on).
+	This data is provided by the GIPHY API.
+	Only once you get images displaying with button presses should you move on to the next step.
+
+6. Add a form to your page takes the value from a user input box and adds it into your topics array.
+
+7. Then make a function call that takes each topic in the array remakes the buttons on the page.
