@@ -15,8 +15,6 @@ $(document).ready(function(){
     });
 
 
-
-
     
     renderButtons();
     onclickforButtons();
